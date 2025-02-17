@@ -1,0 +1,64 @@
+---
+description: 
+globs: 
+---
+# Next.js Development Best Practices
+
+## General
+
+*   **Use TypeScript:**  Always use TypeScript for improved type safety and maintainability.
+*   **Component-Based Architecture:**  Build your UI using reusable components.
+*   **Server-Side Rendering (SSR) / Static Site Generation (SSG):**  Choose the appropriate rendering strategy (SSR, SSG, or ISR) based on your data and performance requirements.  Prioritize SSG where possible.
+*   **Image Optimization:**  Use the `next/image` component for optimized image loading and delivery.
+*   **Font Optimization:**  Use `next/font` to optimize font loading.
+*   **Environment Variables:** Use environment variables for configuration.
+*   **Error Handling:**  Implement comprehensive error handling.
+*   **Accessibility:** Build accessible UIs following ARIA guidelines.
+*   **SEO:** Optimize your application for search engines.
+
+## Data Fetching
+
+*   **`getServerSideProps`:**  Use `getServerSideProps` for data that needs to be fetched on every request.
+*   **`getStaticProps`:** Use `getStaticProps` for data that can be fetched at build time.
+*   **`getStaticPaths`:** Use `getStaticPaths` for dynamic routes with pre-rendered pages.
+*   **`useEffect` with `useState`:** Use `useEffect` and `useState` for client-side data fetching.
+*   **SWR or React Query:** Consider using libraries like SWR or React Query for data fetching, caching, and state management.
+
+## Routing
+
+*   **`next/link`:** Use the `next/link` component for client-side navigation.
+*   **Dynamic Routes:**  Use dynamic routes for pages with variable content.
+*   **API Routes:** Use API routes (`pages/api`) for serverless functions.
+
+## Code Style
+
+*   **Follow a Style Guide (e.g., Airbnb, Standard):**  Adhere to a consistent coding style.
+*   **Meaningful Names:** Use descriptive names.
+*   **Comments:** Write clear comments.
+
+## Testing
+
+*   **Unit Tests:**  Write unit tests for components and utility functions.
+*   **Integration Tests:**  Write integration tests to verify the interaction between components.
+*   **End-to-End Tests:**  Write end-to-end tests to simulate user interactions.
+
+## Performance
+
+*   **Code Splitting:**  Use code splitting to reduce the initial load time.
+*   **Lazy Loading:**  Lazy load components and modules that are not immediately needed.
+*   **Memoization:**  Use `React.memo` or `useMemo` to prevent unnecessary re-renders.
+*   **Bundle Analysis:**  Analyze your bundle size to identify and remove unused code.
+
+## Security
+
+*   **Sanitize User Inputs:** Prevent XSS attacks.
+*   **Protect API Routes:**  Secure your API routes with authentication and authorization.
+*   **CORS:** Configure CORS appropriately.
+
+## Next.js 13+ (App Router) Specific
+
+*   **Server Components:** Use Server Components for data fetching and server-side logic.
+*   **Client Components:** Use Client Components for interactive UI elements.
+*   **`use server` directive:**  Mark server actions using the `use server` directive.
+*   **Streaming:** Leverage streaming for faster initial page loads.
+*   **Route Groups:** Use route groups to organize your routes.

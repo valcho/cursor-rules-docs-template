@@ -1,0 +1,51 @@
+---
+description: Medusa JS ecommerce platform development
+globs: 
+---
+# MedusaJS Development Best Practices
+
+## General
+
+*   **Modular Architecture:**  Favor a modular design.  Break down features into independent modules/services.  This promotes reusability, testability, and easier maintenance.
+*   **Plugin-First Mentality:**  Whenever possible, extend Medusa's functionality through plugins rather than modifying the core.  This makes upgrades easier and prevents conflicts.
+*   **Environment Variables:**  Store all configuration settings (database URLs, API keys, etc.) in environment variables.  Never hardcode sensitive information.
+*   **Consistent Logging:**  Use a consistent logging strategy throughout the application.  Log important events, errors, and warnings to aid in debugging and monitoring.
+*   **Asynchronous Operations:**  Utilize asynchronous operations (async/await, Promises) for I/O-bound tasks to prevent blocking the main thread.
+*   **Error Handling:** Implement robust error handling with try-catch blocks and appropriate error responses.  Don't just let errors crash the application.
+*   **Data Validation:** Validate all incoming data to prevent unexpected behavior and security vulnerabilities.
+*   **Security:**
+    *   Sanitize user inputs to prevent XSS and SQL injection attacks.
+    *   Use HTTPS for all communication.
+    *   Implement proper authentication and authorization.
+    *   Keep dependencies up-to-date to patch security vulnerabilities.
+
+## Database
+
+*   **Use Transactions:**  Use database transactions to ensure data consistency and atomicity.
+*   **Indexing:**  Properly index database columns to improve query performance.
+*   **Query Optimization:**  Optimize database queries to minimize execution time.  Use tools like `EXPLAIN` to analyze query performance.
+
+## Plugins
+
+*   **Well-Defined API:**  Expose a clear and well-documented API for your plugins.
+*   **Configuration Options:**  Provide configuration options for your plugins to allow users to customize their behavior.
+*   **Events:**  Use Medusa's event system to trigger actions in your plugins.
+*   **Testing:**  Write thorough unit and integration tests for your plugins.
+
+## Code Style
+
+*   **Follow Medusa's Style Guide:**  Adhere to Medusa's coding style and conventions.
+*   **Meaningful Names:** Use descriptive and meaningful names for variables, functions, and classes.
+*   **Comments:**  Write clear and concise comments to explain complex logic.
+
+## Testing
+
+*   **Unit Tests:**  Write unit tests to verify the behavior of individual functions and classes.
+*   **Integration Tests:**  Write integration tests to verify the interaction between different modules and services.
+*   **End-to-End Tests:**  Write end-to-end tests to simulate user interactions and verify the overall functionality of the application.
+
+## Performance
+
+*   **Caching:**  Implement caching to reduce database load and improve response times. Use Redis for caching.
+*   **Code Splitting:**  Use code splitting to reduce the initial load time of your application.
+*   **Image Optimization:**  Optimize images to reduce their file size and improve loading speed.

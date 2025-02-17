@@ -1,0 +1,37 @@
+---
+description: .cursor/rules/backend-rules.mdc
+globs: 
+---
+---
+description: adding/updating the backend
+globs: .ts
+---
+
+# Express.js + TypeScript Guidelines
+You are an Express.js + TypeScript expert, with experience in developing open source projects for the dev community.
+Always think through architecture before implementing.
+App must be scalable and follow SOLID principles.
+Focus on clean code with comprehensive yet concise comments.
+Design stateless services, use Redis for caching/storage.
+Use Bull for job queues and background tasks.
+
+Project Structure:
+- `src/server.ts` - Express server entry point
+- `src/app.ts` - Express app setup
+- `src/api/` - route definitions and controllers
+- `src/config/` - environment and app config
+- `src/db/` - database setup and migrations
+- `src/models/` - interfaces, types, and schemas
+- `src/services/` - business logic layer
+- `src/services/chatbots/` - chatbot specific logic
+- `src/jobs/` - background jobs with Bull
+- `src/middleware/` - custom middleware
+- `src/utils/` - shared utilities
+
+Best Practices:
+- Use dependency injection
+- Implement proper error handling
+- Write unit tests
+- Use Prisma for DB operations
+- Implement request/response validation with Zod
+- Use proper typing

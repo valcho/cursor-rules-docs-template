@@ -1,0 +1,60 @@
+---
+description: Strapi JS CMS platform best practices
+globs: 
+---
+# Strapi Development Best Practices
+
+## General
+
+*   **Content Types:** Design content types carefully, considering data structure and relationships.
+*   **Components:** Use components to create reusable content structures.
+*   **Dynamic Zones:** Leverage dynamic zones for flexible content layouts.
+*   **Roles & Permissions:**  Implement a robust role and permission system to control access to content and features.
+*   **Plugins:** Extend Strapi's functionality with plugins. Explore the Strapi Marketplace for existing plugins or create your own.
+*   **Environment Variables:** Store all configuration settings in environment variables.
+*   **Logging:**  Implement a consistent logging strategy.
+*   **Error Handling:** Implement robust error handling in custom controllers and services.
+*   **Data Validation:**  Validate all incoming data to prevent issues.
+*   **Security:**
+    *   Sanitize user inputs.
+    *   Use HTTPS.
+    *   Implement proper authentication and authorization.
+    *   Keep dependencies up-to-date.
+    *   Configure CORS appropriately.
+
+## API Development
+
+*   **RESTful API Design:** Follow RESTful API design principles.
+*   **Pagination:** Implement pagination for large datasets.
+*   **Filtering and Sorting:**  Provide filtering and sorting options for API endpoints.
+*   **Custom Controllers:**  Use custom controllers to implement complex API logic.
+*   **Custom Services:**  Use custom services to encapsulate business logic.
+*   **Webhooks:** Use webhooks to trigger actions when content is created, updated, or deleted.
+
+## Database
+
+*   **Indexing:**  Properly index database columns.
+*   **Query Optimization:** Optimize database queries.
+
+## Code Style
+
+*   **Follow Strapi's Style Guide:**  Adhere to Strapi's coding style and conventions.
+*   **Meaningful Names:** Use descriptive names.
+*   **Comments:** Write clear comments.
+
+## Testing
+
+*   **Unit Tests:**  Write unit tests for custom controllers and services.
+*   **End-to-End Tests:**  Write end-to-end tests to verify API functionality.
+
+## Performance
+
+*   **Caching:** Implement caching to improve API performance.
+*   **Image Optimization:** Optimize images.
+*   **GraphQL:** Consider using GraphQL for more efficient data fetching.
+
+## Strapi v5 Specific
+
+*   **Middleware:** Use middleware for request processing and authentication.
+*   **Providers:** Utilize providers for external services (e.g., email, storage).
+*   **TypeScript:** If possible, use TypeScript for improved type safety and code maintainability.
